@@ -1,6 +1,34 @@
 # FunWithForms
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 11.2.5.
+## Workflow
+
+There are two separate 
+
+## Up and running
+
+Cloning repository: `git clone https://github.com/jankiel7410/fun-with-forms.git`
+
+Branch naming convention:
+`<ticket-id-from-trello>/<meaningful-name>`, e.g. `qBRkmiAS/describe-workflow-in-readme`
+
+
+Stage commit changes: `git add <filename>` or `gir add -A` to add all changed files
+
+And commit ;) `git commit -m "add method foo bar"`
+
+Pushing changes: 
+`git push -u` - this will push your branch to remote
+
+After the branch is pushed to remote, create a new Pull Request. Select source branch: your branch, target branch: dev.
+
+## Releases
+
+Testing environment has all changes from dev branch. To release to production:
+
+1. Create a pull request from dev to master (WARNING: do not check "delete branch")
+1. Review the changes
+1. Merge the request. New production version should be deployed to production environment via CI/CD pipeline.
+
 
 ## Development server
 
@@ -22,6 +50,3 @@ Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.
 
 Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
 
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
