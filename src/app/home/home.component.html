@@ -1,0 +1,57 @@
+<div class="container">
+  <div class="header">
+    <h1>TYPE SOME INFO ABOUT YOU</h1>
+  </div>
+  <form #f="ngForm" (ngSubmit)="onSubmit(f)">
+    <div class="name">
+      <mat-form-field appearance="standard">
+        <mat-label>Name</mat-label>
+        <input matInput ngModel name="name" required />
+      </mat-form-field>
+    </div>
+
+    <div>
+      <mat-form-field appearance="standard">
+        <mat-label>Surname</mat-label>
+        <input matInput ngModel name="surname" required />
+      </mat-form-field>
+    </div>
+
+    <div>
+      <mat-form-field class="example-full-width">
+        <mat-label>Date of birth</mat-label>
+        <input type="date" matInput ngModel name="date" required />
+      </mat-form-field>
+    </div>
+
+    <div>
+      <mat-radio-group
+        required
+        aria-label="Select an option"
+        ngModel
+        name="gender"
+      >
+        <mat-radio-button value="female">Female</mat-radio-button>
+        <mat-radio-button value="male">Male</mat-radio-button>
+      </mat-radio-group>
+    </div>
+
+    <div>
+      <mat-checkbox required class="example-margin" ngModel name="checkIfHuman"
+        >I'm not a robot</mat-checkbox
+      >
+    </div>
+
+    <div>
+      <button mat-raised-button color="primary" type="submit">submit</button>
+
+      <a
+        [disabled]="!submitted"
+        mat-raised-button
+        color="primary"
+        [routerLink]="['/user']"
+        >view profile</a
+      >
+    </div>
+  </form>
+</div>

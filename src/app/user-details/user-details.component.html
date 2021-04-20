@@ -1,0 +1,18 @@
+<div class="container">
+  <div class="header">
+    <h1>Your personal information</h1>
+  </div>
+  <img class="personImg" src="../../assets/personal-information.svg" alt="" />
+  <div class="name data">
+    <img src="../../assets/male-gender.svg" alt="" />
+    <p>{{ userName }} {{ userSurname }}</p>
+  </div>
+  <div class="date data">
+    <img src="../../assets/birthday-cake.svg" alt="" />
+    <p>{{ userBirthDate }}</p>
+  </div>
+
+  <a mat-raised-button color="primary" [routerLink]="['']">Return</a>
+</div>
+
+<!-- <p>{{ counter }}</p> -->
