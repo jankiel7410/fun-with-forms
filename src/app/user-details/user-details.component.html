@@ -4,7 +4,16 @@
   </div>
   <img class="personImg" src="../../assets/personal-information.svg" alt="" />
   <div class="name data">
-    <img src="../../assets/male-gender.svg" alt="" />
+    <img
+      *ngIf="userGender === 'male'"
+      src="../../assets/male-gender.svg"
+      alt=""
+    />
+    <img
+      *ngIf="userGender === 'female'"
+      src="../../assets/femenine.svg"
+      alt=""
+    />
     <p>{{ userName }} {{ userSurname }}</p>
   </div>
   <div class="date data">

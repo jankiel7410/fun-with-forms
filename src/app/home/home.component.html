@@ -2,7 +2,7 @@
   <div class="header">
     <h1>TYPE SOME INFO ABOUT YOU</h1>
   </div>
-  <form #f="ngForm" (ngSubmit)="onSubmit(f)">
+  <form #userForm="ngForm" (ngSubmit)="onSubmit(userForm)">
     <div class="name">
       <mat-form-field appearance="standard">
         <mat-label>Name</mat-label>
@@ -20,7 +20,7 @@
     <div>
       <mat-form-field class="example-full-width">
         <mat-label>Date of birth</mat-label>
-        <input type="date" matInput ngModel name="date" required />
+        <input type="date" matInput ngModel name="birthDate" required />
       </mat-form-field>
     </div>
 
@@ -37,9 +37,9 @@
     </div>
 
     <div>
-      <mat-checkbox required class="example-margin" ngModel name="checkIfHuman"
-        >I'm not a robot</mat-checkbox
-      >
+      <mat-checkbox required class="example-margin" ngModel name="checkIfHuman">
+        I'm not a robot
+      </mat-checkbox>
     </div>
 
     <div>
@@ -50,8 +50,9 @@
         mat-raised-button
         color="primary"
         [routerLink]="['/user']"
-        >view profile</a
       >
+        view profile
+      </a>
     </div>
   </form>
 </div>

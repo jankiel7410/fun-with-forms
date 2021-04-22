@@ -9,7 +9,7 @@ import { UserService } from '../user.service';
 export class UserDetailsComponent implements OnInit {
   userName = this.userService.getUser().name;
   userSurname = this.userService.getUser().surname;
-  userBirthDate = this.userService.getUser().date;
+  userBirthDate = this.userService.getUser().birthDate;
   userGender = this.userService.getUser().gender;
 
   constructor(private userService: UserService) {}
